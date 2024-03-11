@@ -47,6 +47,8 @@ let count = document.querySelector('.count')
 let wordTable = [];
 correctIndices = []
 let motMagique
+let generatedNumbers = [];
+let finish = document.querySelector('.finish')
 // *********** Fonctions ************
 
 // function getRandomNumber() {
@@ -54,8 +56,38 @@ let motMagique
 //   }
 
 // Va chercher un mot random 
+
+// function giveRandomNumber() {
+
+//        randomNumber = Math.ceil(Math.random()*i)
+//         if (generatedNumbers.includes(randomNumber))
+//         {   finish.classList.add('show')
+//             return
+            
+//         } else {
+//             generatedNumbers.push(randomNumber);
+//         }
+     
+        
+//         return randomNumber;
+       
+      
+//     // return Math.ceil(Math.random()*i);
+//   }
+
+// Va chercher un mot random 
+
 function giveRandomNumber() {
-    return Math.ceil(Math.random()*i);
+    let randomNumber
+    do {
+        randomNumber = Math.ceil(Math.random() * i);
+      } while (generatedNumbers.includes(randomNumber));
+      
+      generatedNumbers.push(randomNumber);
+
+      return randomNumber;
+
+    // return Math.ceil(Math.random()*i);
   }
   
   // Aller chercher un nouveau Mot au hasard dans le tableau
@@ -156,40 +188,8 @@ function test() {
     })
 }
 
-// function test(randomNumber) {
-    
-//     buttonAnswer.addEventListener('click', function() {
-//         if (localStorage.getItem(`translate${Math.ceil(randomNumber*i)}`) == inputTest.value ) {
-//             correctAnswer.classList.add('show');
-//             falseAnswer.classList.remove('show');
-
-//             // Add the index of the correctly translated word to the array
-//             correctIndices.push(Math.ceil(randomNumber*i));
-
-//             // Remove the index from the array of words to translate
-//             let indexToRemove = correctIndices.indexOf(Math.ceil(randomNumber*i));
-//             if (indexToRemove !== -1) {
-//                 correctIndices.splice(indexToRemove, 1);
-//             }
-
-//             // Check if there are any more words left to translate
-//             if (correctIndices.length > 0) {
-//                 // Randomly select an index from the array of correct indices
-//                 let newIndex = correctIndices[Math.floor(Math.random() * correctIndices.length)];
-//                 // Display the new word to translate
-//                 testToTranslate.innerHTML = localStorage.getItem(`wordToTranslate${newIndex}`);
-//             } 
-//         } else {
-//             falseAnswer.classList.add('show');
-//             correctAnswer.classList.remove('show');
-//         }
-//     })
-// }
-
-
 // *********** Appels de fonctions ************
 
-console.log(i)
 sendTranslate()
 eraseList()
 // getRandomNumber()
