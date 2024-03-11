@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.min.css">
+    <title></title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="app-box">
+            <h1>TraduFlex</h1>
+            <h4>L'app qui vous permet de flex sur vos connaissances en langue</h4>
+            <h3>Ajoutez des mots à votre liste</h3>
+            <div class="inputs">
+                <h4>Mot à traduire</h3>
+                <input class="inputToTranslate" type="text" name="" id="" placeholder="Entez votre mot">
+                <h4>Traduction</h3>
+                <input class="InputTranslated" type="text" name="" id="" placeholder="Entrez votre traduction">
+                <p>il y a <span class="countDown">0</span> mot(s) enregistré(s)</p>
+            </div>
+            <div class="buttons">
+                <button class="send">envoyer</button>
+                <button class="erase">effacer la liste en cours</button>
+            </div>
+            <button class="test">Test tes connaissances</button>
+        </div>
+    </div>
+    <div class="test-box">
+        <div class="inside-test">
+            <h1>Traduis le mot "<span class="test-to-translate"></span>"</h1>
+            <input class="input-test" type="text" name="" id="" placeholder="Entrez votre réponse">
+            <button class="button-answer">envoyer</button>
+            <h2 class="count"></h2>
+            <h2 class="correct">Réponse correct</h2>
+            <h2 class="false">Faux</h2>
+        </div>
+    </div>
+    <div class="cancel">❌</div>
+    
+
+    <script defer src="scripts/main.js"></script>
+</body>
+
+</html>
